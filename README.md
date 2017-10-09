@@ -112,16 +112,20 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 
 Key files used for this project include
+      
       README.txt file used as summary of all files downloaded in the .zip
+      
       features.txt & features_info.txt files were used to interpret the 561 
             columns of data, and to rename the data to be a bit more readable
-      Train data set: 
-            y_train.txt (7352x1): list of activities performed by each subject
-            subject_train.txt (7352x1): list of subjects' unqiue ID number
-            X_train.txt (7352x561): data observed (561 columns) for 
-                        every activity type performed by each subject (7352 rows)
-      Test data set
-            y_test.txt (2947x1):  list of activities performed by each subject
-            subject_test.txt (2947x1): list of subjects' unqiue ID number
-            X_test.txt (2947x561): data observed (561 columns) for 
-                        every activity type performed by each subject (2947 rows)
+      
+      y_train.txt (7352x1): list of activities performed by each subject
+            
+      subject_train.txt (7352x1): list of subjects' unqiue ID number
+      
+      X_train.txt (7352x561): data observed (561 columns) for every activity type performed by each subject (7352 rows)
+      
+      y_test.txt (2947x1):  list of activities performed by each subject
+      
+      subject_test.txt (2947x1): list of subjects' unqiue ID number
+      
+      X_test.txt (2947x561): data observed (561 columns) for every activity type performed by each subject (2947 rows)
