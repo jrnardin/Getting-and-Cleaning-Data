@@ -40,102 +40,113 @@ Second column labeled "Activity_Measured" - represents the various activities
 
 The rest of the columns are "num" variables in the original and final dataset, 
 but in the final dataset, all are the "mean" of the values in the original 
-dataset. All of these variables have a 6 part name:
+dataset. 
+
+All of these variables have a 6 part name:
+
       1. Whether the calculation is a Mean or Standard Deviation (StdDev)
+      
       2. Whether the calculation is on the X, Y, Z axis or on the magnitude 
              magnitude derived from the three-dimensional signals using the Euclidean norm
+      
       3. Whether it is motion from the Body or from Gravity
+      
       4. Whether it was recorded from the accelerometer or from the gyroscope
+      
       5. If it was canculated as a jerk motion or not
             linear acceleration and angular velocity were derived in time
             no value inserted here, if it wasn't a "jerk motion" calculation
+      
       6. Whether the values are from the time or frequency domain signals
       
-      as per the course instructions, I created descriptive measurement names before
-      the final table was created, which slightly modified the contents of the table
-      the new dataframe's name (and file output) are used to indicate that all
-      of the data in the content are calculated as a "mean"
+as per the course instructions, I created descriptive measurement names before
+the final table was created, which slightly modified the contents of the table
+the new dataframe's name (and file output) are used to indicate that all
+of the data in the content are calculated as a "mean"
 
-(*list is best viewed with very wide screen--up to 145 characters wide*)
-Old Column Name: fBodyAccJerk-mean()-X                      New Column Name: Mean_of_X_from_Body_Accelerometer_Jerk_freq
-Old Column Name: fBodyAccJerk-mean()-Y                      New Column Name: Mean_of_Y_from_Body_Accelerometer_Jerk_freq
-Old Column Name: fBodyAccJerk-mean()-Z                      New Column Name: Mean_of_Z_from_Body_Accelerometer_Jerk_freq
-Old Column Name: fBodyAccJerk-meanFreq()-X                      New Column Name: MeanFreq_of_X_from_Body_Accelerometer_Jerk_freq
-Old Column Name: fBodyAccJerk-meanFreq()-Y                      New Column Name: MeanFreq_of_Y_from_Body_Accelerometer_Jerk_freq
-Old Column Name: fBodyAccJerk-meanFreq()-Z                      New Column Name: MeanFreq_of_Z_from_Body_Accelerometer_Jerk_freq
-Old Column Name: fBodyAccJerk-std()-X                      New Column Name: StdDev_of_X_from_Body_Accelerometer_Jerk_freq
-Old Column Name: fBodyAccJerk-std()-Y                      New Column Name: StdDev_of_Y_from_Body_Accelerometer_Jerk_freq
-Old Column Name: fBodyAccJerk-std()-Z                      New Column Name: StdDev_of_Z_from_Body_Accelerometer_Jerk_freq
-Old Column Name: fBodyBodyAccJerkMag-mean()                      New Column Name: Mean_of_Magnitude_from_Body_Accelerometer_Jerk_freq
-Old Column Name: fBodyBodyAccJerkMag-meanFreq()                      New Column Name: MeanFreq_of_Magnitude_from_Body_Accelerometer_Jerk_freq
-Old Column Name: fBodyBodyAccJerkMag-std()                      New Column Name: StdDev_of_Magnitude_from_Body_Accelerometer_Jerk_freq
-Old Column Name: fBodyBodyGyroJerkMag-mean()                      New Column Name: Mean_of_Magnitude_from_Body_Gyroscope_Jerk_freq
-Old Column Name: fBodyBodyGyroJerkMag-meanFreq()                      New Column Name: MeanFreq_of_Magnitude_from_Body_Gyroscope_Jerk_freq
-Old Column Name: fBodyBodyGyroJerkMag-std()                      New Column Name: StdDev_of_Magnitude_from_Body_Gyroscope_Jerk_freq
-Old Column Name: tBodyAccJerk-mean()-X                      New Column Name: Mean_of_X_from_Body_Accelerometer_Jerk_time
-Old Column Name: tBodyAccJerk-mean()-Y                      New Column Name: Mean_of_Y_from_Body_Accelerometer_Jerk_time
-Old Column Name: tBodyAccJerk-mean()-Z                      New Column Name: Mean_of_Z_from_Body_Accelerometer_Jerk_time
-Old Column Name: tBodyAccJerk-std()-X                      New Column Name: StdDev_of_X_from_Body_Accelerometer_Jerk_time
-Old Column Name: tBodyAccJerk-std()-Y                      New Column Name: StdDev_of_Y_from_Body_Accelerometer_Jerk_time
-Old Column Name: tBodyAccJerk-std()-Z                      New Column Name: StdDev_of_Z_from_Body_Accelerometer_Jerk_time
-Old Column Name: tBodyAccJerkMag-mean()                      New Column Name: Mean_of_Magnitude_from_Body_Accelerometer_Jerk_time
-Old Column Name: tBodyAccJerkMag-std()                      New Column Name: StdDev_of_Magnitude_from_Body_Accelerometer_Jerk_time
-Old Column Name: tBodyGyroJerk-mean()-X                      New Column Name: Mean_of_X_from_Body_Gyroscope_Jerk_time
-Old Column Name: tBodyGyroJerk-mean()-Y                      New Column Name: Mean_of_Y_from_Body_Gyroscope_Jerk_time
-Old Column Name: tBodyGyroJerk-mean()-Z                      New Column Name: Mean_of_Z_from_Body_Gyroscope_Jerk_time
-Old Column Name: tBodyGyroJerk-std()-X                      New Column Name: StdDev_of_X_from_Body_Gyroscope_Jerk_time
-Old Column Name: tBodyGyroJerk-std()-Y                      New Column Name: StdDev_of_Y_from_Body_Gyroscope_Jerk_time
-Old Column Name: tBodyGyroJerk-std()-Z                      New Column Name: StdDev_of_Z_from_Body_Gyroscope_Jerk_time
-Old Column Name: tBodyGyroJerkMag-mean()                      New Column Name: Mean_of_Magnitude_from_Body_Gyroscope_Jerk_time
-Old Column Name: tBodyGyroJerkMag-std()                      New Column Name: StdDev_of_Magnitude_from_Body_Gyroscope_Jerk_time
-Old Column Name: fBodyAcc-mean()-X                      New Column Name: Mean_of_X_from_Body_Accelerometer_freq
-Old Column Name: fBodyAcc-mean()-Y                      New Column Name: Mean_of_Y_from_Body_Accelerometer_freq
-Old Column Name: fBodyAcc-mean()-Z                      New Column Name: Mean_of_Z_from_Body_Accelerometer_freq
-Old Column Name: fBodyAcc-meanFreq()-X                      New Column Name: MeanFreq_of_X_from_Body_Accelerometer_freq
-Old Column Name: fBodyAcc-meanFreq()-Y                      New Column Name: MeanFreq_of_Y_from_Body_Accelerometer_freq
-Old Column Name: fBodyAcc-meanFreq()-Z                      New Column Name: MeanFreq_of_Z_from_Body_Accelerometer_freq
-Old Column Name: fBodyAcc-std()-X                      New Column Name: StdDev_of_X_from_Body_Accelerometer_freq
-Old Column Name: fBodyAcc-std()-Y                      New Column Name: StdDev_of_Y_from_Body_Accelerometer_freq
-Old Column Name: fBodyAcc-std()-Z                      New Column Name: StdDev_of_Z_from_Body_Accelerometer_freq
-Old Column Name: fBodyAccMag-mean()                      New Column Name: Mean_of_Mag_from_Body_Accelerometer_freq
-Old Column Name: fBodyAccMag-meanFreq()                      New Column Name: MeanFreq_of_Mag_from_Body_Accelerometer_freq
-Old Column Name: fBodyAccMag-std()                      New Column Name: StdDev_of_Mag_from_Body_Accelerometer_freq
-Old Column Name: fBodyBodyGyroMag-mean()                      New Column Name: Mean_of_Mag_from_Body_Gyroscope_freq
-Old Column Name: fBodyBodyGyroMag-meanFreq()                      New Column Name: MeanFreq_of_Mag_from_Body_Gyroscope_freq
-Old Column Name: fBodyBodyGyroMag-std()                      New Column Name: StdDev_of_Mag_from_Body_Gyroscope_freq
-Old Column Name: fBodyGyro-mean()-X                      New Column Name: Mean_of_X_from_Body_Gyroscope_freq
-Old Column Name: fBodyGyro-mean()-Y                      New Column Name: Mean_of_Y_from_Body_Gyroscope_freq
-Old Column Name: fBodyGyro-mean()-Z                      New Column Name: Mean_of_Z_from_Body_Gyroscope_freq
-Old Column Name: fBodyGyro-meanFreq()-X                      New Column Name: MeanFreq_of_X_from_Body_Gyroscope_freq
-Old Column Name: fBodyGyro-meanFreq()-Y                      New Column Name: MeanFreq_of_Y_from_Body_Gyroscope_freq
-Old Column Name: fBodyGyro-meanFreq()-Z                      New Column Name: MeanFreq_of_Z_from_Body_Gyroscope_freq
-Old Column Name: fBodyGyro-std()-X                      New Column Name: StdDev_of_X_from_Body_Gyroscope_freq
-Old Column Name: fBodyGyro-std()-Y                      New Column Name: StdDev_of_Y_from_Body_Gyroscope_freq
-Old Column Name: fBodyGyro-std()-Z                      New Column Name: StdDev_of_Z_from_Body_Gyroscope_freq
-Old Column Name: tBodyAcc-mean()-X                      New Column Name: Mean_of_X_from_Body_Accelerometer_time
-Old Column Name: tBodyAcc-mean()-Y                      New Column Name: Mean_of_Y_from_Body_Accelerometer_time
-Old Column Name: tBodyAcc-mean()-Z                      New Column Name: Mean_of_Z_from_Body_Accelerometer_time
-Old Column Name: tBodyAcc-std()-X                      New Column Name: StdDev_of_X_from_Body_Accelerometer_time
-Old Column Name: tBodyAcc-std()-Y                      New Column Name: StdDev_of_Y_from_Body_Accelerometer_time
-Old Column Name: tBodyAcc-std()-Z                      New Column Name: StdDev_of_Z_from_Body_Accelerometer_time
-Old Column Name: tBodyAccMag-mean()                      New Column Name: Mean_of_Mag_from_Body_Accelerometer_time
-Old Column Name: tBodyAccMag-std()                      New Column Name: StdDev_of_Mag_from_Body_Accelerometer_time
-Old Column Name: tBodyGyro-mean()-X                      New Column Name: Mean_of_X_from_Body_Gyroscope_time
-Old Column Name: tBodyGyro-mean()-Y                      New Column Name: Mean_of_Y_from_Body_Gyroscope_time
-Old Column Name: tBodyGyro-mean()-Z                      New Column Name: Mean_of_Z_from_Body_Gyroscope_time
-Old Column Name: tBodyGyro-std()-X                      New Column Name: StdDev_of_X_from_Body_Gyroscope_time
-Old Column Name: tBodyGyro-std()-Y                      New Column Name: StdDev_of_Y_from_Body_Gyroscope_time
-Old Column Name: tBodyGyro-std()-Z                      New Column Name: StdDev_of_Z_from_Body_Gyroscope_time
-Old Column Name: tBodyGyroMag-mean()                      New Column Name: Mean_of_Mag_from_Body_Gyroscope_time
-Old Column Name: tBodyGyroMag-std()                      New Column Name: StdDev_of_Mag_from_Body_Gyroscope_time
-Old Column Name: tGravityAcc-mean()-X                      New Column Name: Mean_of_X_from_Gravity_Accelerometer_time
-Old Column Name: tGravityAcc-mean()-Y                      New Column Name: Mean_of_Y_from_Gravity_Accelerometer_time
-Old Column Name: tGravityAcc-mean()-Z                      New Column Name: Mean_of_Z_from_Gravity_Accelerometer_time
-Old Column Name: tGravityAcc-std()-X                      New Column Name: StdDev_of_X_from_Gravity_Accelerometer_time
-Old Column Name: tGravityAcc-std()-Y                      New Column Name: StdDev_of_Y_from_Gravity_Accelerometer_time
-Old Column Name: tGravityAcc-std()-Z                      New Column Name: StdDev_of_Z_from_Gravity_Accelerometer_time
-Old Column Name: tGravityAccMag-mean()                      New Column Name: Mean_of_Mag_from_Gravity_Accelerometer_time
-Old Column Name: tGravityAccMag-std()                      New Column Name: StdDev_of_Mag_from_Gravity_Accelerometer_time
+      (*list is best viewed with very wide screen--up to 80 characters wide*)
+      
+      old column name    >>     new column name
+
+fBodyAccJerk-mean()-X     >>     Mean_of_X_from_Body_Accelerometer_Jerk_freq
+fBodyAccJerk-mean()-Y     >>     Mean_of_Y_from_Body_Accelerometer_Jerk_freq
+fBodyAccJerk-mean()-Z     >>     Mean_of_Z_from_Body_Accelerometer_Jerk_freq
+fBodyAccJerk-meanFreq()-X     >>     MeanFreq_of_X_from_Body_Accelerometer_Jerk_freq
+fBodyAccJerk-meanFreq()-Y     >>     MeanFreq_of_Y_from_Body_Accelerometer_Jerk_freq
+fBodyAccJerk-meanFreq()-Z     >>     MeanFreq_of_Z_from_Body_Accelerometer_Jerk_freq
+fBodyAccJerk-std()-X     >>     StdDev_of_X_from_Body_Accelerometer_Jerk_freq
+fBodyAccJerk-std()-Y     >>     StdDev_of_Y_from_Body_Accelerometer_Jerk_freq
+fBodyAccJerk-std()-Z     >>     StdDev_of_Z_from_Body_Accelerometer_Jerk_freq
+fBodyBodyAccJerkMag-mean()     >>     Mean_of_Magnitude_from_Body_Accelerometer_Jerk_freq
+fBodyBodyAccJerkMag-meanFreq()     >>     MeanFreq_of_Magnitude_from_Body_Accelerometer_Jerk_freq
+fBodyBodyAccJerkMag-std()     >>     StdDev_of_Magnitude_from_Body_Accelerometer_Jerk_freq
+fBodyBodyGyroJerkMag-mean()     >>     Mean_of_Magnitude_from_Body_Gyroscope_Jerk_freq
+fBodyBodyGyroJerkMag-meanFreq()     >>     MeanFreq_of_Magnitude_from_Body_Gyroscope_Jerk_freq
+fBodyBodyGyroJerkMag-std()     >>     StdDev_of_Magnitude_from_Body_Gyroscope_Jerk_freq
+tBodyAccJerk-mean()-X     >>     Mean_of_X_from_Body_Accelerometer_Jerk_time
+tBodyAccJerk-mean()-Y     >>     Mean_of_Y_from_Body_Accelerometer_Jerk_time
+tBodyAccJerk-mean()-Z     >>     Mean_of_Z_from_Body_Accelerometer_Jerk_time
+tBodyAccJerk-std()-X     >>     StdDev_of_X_from_Body_Accelerometer_Jerk_time
+tBodyAccJerk-std()-Y     >>     StdDev_of_Y_from_Body_Accelerometer_Jerk_time
+tBodyAccJerk-std()-Z     >>     StdDev_of_Z_from_Body_Accelerometer_Jerk_time
+tBodyAccJerkMag-mean()     >>     Mean_of_Magnitude_from_Body_Accelerometer_Jerk_time
+tBodyAccJerkMag-std()     >>     StdDev_of_Magnitude_from_Body_Accelerometer_Jerk_time
+tBodyGyroJerk-mean()-X     >>     Mean_of_X_from_Body_Gyroscope_Jerk_time
+tBodyGyroJerk-mean()-Y     >>     Mean_of_Y_from_Body_Gyroscope_Jerk_time
+tBodyGyroJerk-mean()-Z     >>     Mean_of_Z_from_Body_Gyroscope_Jerk_time
+tBodyGyroJerk-std()-X     >>     StdDev_of_X_from_Body_Gyroscope_Jerk_time
+tBodyGyroJerk-std()-Y     >>     StdDev_of_Y_from_Body_Gyroscope_Jerk_time
+tBodyGyroJerk-std()-Z     >>     StdDev_of_Z_from_Body_Gyroscope_Jerk_time
+tBodyGyroJerkMag-mean()     >>     Mean_of_Magnitude_from_Body_Gyroscope_Jerk_time
+tBodyGyroJerkMag-std()     >>     StdDev_of_Magnitude_from_Body_Gyroscope_Jerk_time
+fBodyAcc-mean()-X     >>     Mean_of_X_from_Body_Accelerometer_freq
+fBodyAcc-mean()-Y     >>     Mean_of_Y_from_Body_Accelerometer_freq
+fBodyAcc-mean()-Z     >>     Mean_of_Z_from_Body_Accelerometer_freq
+fBodyAcc-meanFreq()-X     >>     MeanFreq_of_X_from_Body_Accelerometer_freq
+fBodyAcc-meanFreq()-Y     >>     MeanFreq_of_Y_from_Body_Accelerometer_freq
+fBodyAcc-meanFreq()-Z     >>     MeanFreq_of_Z_from_Body_Accelerometer_freq
+fBodyAcc-std()-X     >>     StdDev_of_X_from_Body_Accelerometer_freq
+fBodyAcc-std()-Y     >>     StdDev_of_Y_from_Body_Accelerometer_freq
+fBodyAcc-std()-Z     >>     StdDev_of_Z_from_Body_Accelerometer_freq
+fBodyAccMag-mean()     >>     Mean_of_Mag_from_Body_Accelerometer_freq
+fBodyAccMag-meanFreq()     >>     MeanFreq_of_Mag_from_Body_Accelerometer_freq
+fBodyAccMag-std()     >>     StdDev_of_Mag_from_Body_Accelerometer_freq
+fBodyBodyGyroMag-mean()     >>     Mean_of_Mag_from_Body_Gyroscope_freq
+fBodyBodyGyroMag-meanFreq()     >>     MeanFreq_of_Mag_from_Body_Gyroscope_freq
+fBodyBodyGyroMag-std()     >>     StdDev_of_Mag_from_Body_Gyroscope_freq
+fBodyGyro-mean()-X     >>     Mean_of_X_from_Body_Gyroscope_freq
+fBodyGyro-mean()-Y     >>     Mean_of_Y_from_Body_Gyroscope_freq
+fBodyGyro-mean()-Z     >>     Mean_of_Z_from_Body_Gyroscope_freq
+fBodyGyro-meanFreq()-X     >>     MeanFreq_of_X_from_Body_Gyroscope_freq
+fBodyGyro-meanFreq()-Y     >>     MeanFreq_of_Y_from_Body_Gyroscope_freq
+fBodyGyro-meanFreq()-Z     >>     MeanFreq_of_Z_from_Body_Gyroscope_freq
+fBodyGyro-std()-X     >>     StdDev_of_X_from_Body_Gyroscope_freq
+fBodyGyro-std()-Y     >>     StdDev_of_Y_from_Body_Gyroscope_freq
+fBodyGyro-std()-Z     >>     StdDev_of_Z_from_Body_Gyroscope_freq
+tBodyAcc-mean()-X     >>     Mean_of_X_from_Body_Accelerometer_time
+tBodyAcc-mean()-Y     >>     Mean_of_Y_from_Body_Accelerometer_time
+tBodyAcc-mean()-Z     >>     Mean_of_Z_from_Body_Accelerometer_time
+tBodyAcc-std()-X     >>     StdDev_of_X_from_Body_Accelerometer_time
+tBodyAcc-std()-Y     >>     StdDev_of_Y_from_Body_Accelerometer_time
+tBodyAcc-std()-Z     >>     StdDev_of_Z_from_Body_Accelerometer_time
+tBodyAccMag-mean()     >>     Mean_of_Mag_from_Body_Accelerometer_time
+tBodyAccMag-std()     >>     StdDev_of_Mag_from_Body_Accelerometer_time
+tBodyGyro-mean()-X     >>     Mean_of_X_from_Body_Gyroscope_time
+tBodyGyro-mean()-Y     >>     Mean_of_Y_from_Body_Gyroscope_time
+tBodyGyro-mean()-Z     >>     Mean_of_Z_from_Body_Gyroscope_time
+tBodyGyro-std()-X     >>     StdDev_of_X_from_Body_Gyroscope_time
+tBodyGyro-std()-Y     >>     StdDev_of_Y_from_Body_Gyroscope_time
+tBodyGyro-std()-Z     >>     StdDev_of_Z_from_Body_Gyroscope_time
+tBodyGyroMag-mean()     >>     Mean_of_Mag_from_Body_Gyroscope_time
+tBodyGyroMag-std()     >>     StdDev_of_Mag_from_Body_Gyroscope_time
+tGravityAcc-mean()-X     >>     Mean_of_X_from_Gravity_Accelerometer_time
+tGravityAcc-mean()-Y     >>     Mean_of_Y_from_Gravity_Accelerometer_time
+tGravityAcc-mean()-Z     >>     Mean_of_Z_from_Gravity_Accelerometer_time
+tGravityAcc-std()-X     >>     StdDev_of_X_from_Gravity_Accelerometer_time
+tGravityAcc-std()-Y     >>     StdDev_of_Y_from_Gravity_Accelerometer_time
+tGravityAcc-std()-Z     >>     StdDev_of_Z_from_Gravity_Accelerometer_time
+tGravityAccMag-mean()     >>     Mean_of_Mag_from_Gravity_Accelerometer_time
+tGravityAccMag-std()     >>     StdDev_of_Mag_from_Gravity_Accelerometer_time
 
 
 
