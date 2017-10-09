@@ -43,50 +43,63 @@ DESCRIPTIVE ACTIVITY NAMES
       5 = Standing
       6 = Laying
 
-DESCRIPTIVE MEASUREMENT NAMES (columns)
+DESCRIPTIVE MEASUREMENT NAMES (columns)  (*More details about the column names can be found in the CodeBook*)
+
       first two column labeled "ID_Num_of_Subject"" and "Activity_Measured"
+      
       The rest of the columns have a 6 part name:
+      
       1. Whether the calculation is a Mean or Standard Deviation (StdDev)
+      
       2. Whether the calculation is on the X, Y, Z axis or on the magnitude 
              magnitude derived from the three-dimensional signals using the Euclidean norm
+      
       3. Whether it is motion from the Body or from Gravity
+      
       4. Whether it was recorded from the accelerometer or from the gyroscope
+      
       5. If it was canculated as a jerk motion or not
             linear acceleration and angular velocity were derived in time
             no value inserted here, if it wasn't a "jerk motion" calculation
+      
       6. Whether the values are from the time or frequency domain signals
       
       as per the course instructions, I created descriptive measurement names before
       the final table was created, which slightly modified the contents of the table
       the new dataframe's name (and file output) are used to indicate that all
       of the data in the content are calculated as a "mean"
-      (*More details about the column names can be found in the CodeBook*)
+     
 
 SUMMARY OF THE DATA      
       to achieve a tidy data set in the end, I used the "ddply" function 
             from the plyr package to split the data frame, 
             apply the mean function on all remaining columns
-            and return a new datagframe
+            and return a new dataframe.
       
-      I opted for a final, tidy data set that mirrored the previous datasets
-      (instead of transposing the data) so that the user/reader would be able to
-      easily map data between the common files, if analysis or any sort of 
-      additional work is to be done on the data. 
+I opted for a final, tidy data set that mirrored the previous datasets (instead 
+of transposing the data) so that the user/reader would be able to easily map 
+data between the common files, if analysis or any sort of  additional work is 
+to be done on the data. 
       
-      based on the fields chosen & functionality above, this resulted in the tranformation
+Based on the fields chosen & functionality above, this resulted in the tranformation
             of the bulky 10299x563 dataset being summarized into just 180x81 dataset
         
 ## FILES CREATED
 5 files included in this repository
+
       README - describes the functionality of the R script "run_analysis" and 
             describes the files used for this project, both the files I created
             and the sources files downloaded from the public domain
+
       codebook.md - describes the variables in the dataset
+
       run_analysis.R - the actual algorithm/script that manipulates the data; I 
             believe you will find this well documented & easy to real
+
       week4 assignment labeling.xlxs - an extra (not required) file that I used
             to create the 81 variable names and the function calls that use those
             variable names
+
       Mean_of_All_Output.txt - a tidy data set that is the final output of the work
             describedd here & in the associated files.
 
